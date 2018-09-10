@@ -15,7 +15,10 @@ def dict_factory(cursor, row):
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Distant Reading Archive</h1>
-<p>A prototype API for distant reading of science fiction novels.</p>'''
+<p>A prototype API for distant reading of science fiction novels.</p>
+<p>all books: http://127.0.0.1:5000/api/v1/resources/books/all</p>
+<p>by author: http://127.0.0.1:5000/api/v1/resources/books?author=Connie+Willis</p>
+<p>by year: http://127.0.0.1:5000/api/v1/resources/books?published=2010</p>'''
 
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])
